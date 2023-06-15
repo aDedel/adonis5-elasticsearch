@@ -1,0 +1,85 @@
+{
+  "name": "@dedel.alex/adonis5-elasticsearch",
+  "version": "1.0.0",
+  "description": "Elasticsearch Provider for AdonisJS 5",
+  "main": "build/providers/ElasticsearchProvider.js",
+  "author": "dedel.alex",
+  "license": "MIT",
+  "files": [
+    "build/src",
+    "build/providers",
+    "build/templates",
+    "build/adonis-typings"
+  ],
+  "scripts": {
+    "mrm": "mrm --preset=@adonisjs/mrm-preset",
+    "pretest": "npm run lint",
+    "test": "node -r @adonisjs/require-ts/build/register bin/test.ts",
+    "clean": "del-cli build",
+    "copyfiles": "copyfiles \"templates/**/*.txt\" build",
+    "compile": "npm run lint && npm run clean && tsc && npm run copyfiles",
+    "build": "npm run compile",
+    "lint": "eslint . --ext=.ts --fix",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "adonis",
+    "adonis 5",
+    "adonisjs",
+    "adonisjs 5",
+    "elasticsearch"
+  ],
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.8.1"
+  },
+  "devDependencies": {
+    "@adonisjs/ace": "^11.3.1",
+    "@adonisjs/core": "^5.9.0",
+    "@adonisjs/mrm-preset": "^5.0.3",
+    "@adonisjs/require-ts": "^2.0.13",
+    "@types/node": "^20.3.1",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-adonis": "^2.1.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mrm": "^4.1.14",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.3"
+  },
+  "peerDependencies": {
+    "@adonisjs/ace": "^11.0.0",
+    "@adonisjs/core": "^5.1.0"
+  },
+  "adonisjs": {
+    "templates": {
+      "contracts": [
+        {
+          "src": "contract.txt",
+          "dest": "elasticsearch"
+        }
+      ]
+    },
+    "env": {
+      "ELASTICSEARCH_URI": "https://127.0.0.1:9200",
+      "ELASTICSEARCH_USER": "elastic",
+      "ELASTICSEARCH_PASSWORD": "",
+      "ELASTICSEARCH_OPTIONS": ""
+    },
+    "types": "@dedel.alex/adonis5-elasticsearch",
+    "providers": [
+      "@dedel.alex/adonis5-elasticsearch"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aDedel/adonis5-elasticsearch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aDedel/adonis5-elasticsearch/issues"
+  },
+  "homepage": "https://github.com/aDedel/adonis5-elasticsearch#readme",
+  "types": "./build/providers/ElasticsearchProvider.d.ts"
+}
