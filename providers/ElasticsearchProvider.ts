@@ -47,14 +47,11 @@ export default class ElasticsearchProvider {
     const options = Env.get("ELASTICSEARCH_OPTIONS");
     const config = options ? JSON.parse(options) : {};
 
-    const basicAuth =
-      host && username && password
-        ? {
-            node: host,
-            auth: { username, password },
-          }
-        : {};
+    const basicAuth = {
+      node: host,
+      auth: { username, password },
+    };
 
-    return new Client({ ...config, ...basicAuth });
+    return new Client({ ...basicAuth, ...config });
   }
 }
