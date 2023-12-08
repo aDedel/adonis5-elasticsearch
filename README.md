@@ -33,31 +33,30 @@ ELASTICSEARCH_OPTIONS=""
 Here is an example of how to use the Elasticsearch Provider:
 
 ```ts
-import client from '@ioc:Adonis/Addons/Elasticsearch'
+import client from "@ioc:Adonis/Addons/Elasticsearch";
 
 // Get index - where the documents are stored.
 const index = await client.index({
-  index: 'game-of-thrones',
+  index: "game-of-thrones",
   document: {
-    character: 'Ned Stark',
-    quote: 'Winter is coming.'
-  }
-})
+    character: "Ned Stark",
+    quote: "Winter is coming.",
+  },
+});
 
 // here we are forcing an index refresh, otherwise we will not
 // get any result in the consequent search
-await client.indices.refresh({ index: 'game-of-thrones' })
+await client.indices.refresh({ index: "game-of-thrones" });
 
 // Let's search!
-const result= await client.search({
-  index: 'game-of-thrones',
+const result = await client.search({
+  index: "game-of-thrones",
   query: {
-    match: { quote: 'winter' }
-  }
-})
+    match: { quote: "winter" },
+  },
+});
 
-console.log(result.hits.hits)
-
+console.log(result.hits.hits);
 ```
 
 For more information about Elasticsearch, check the [offical website](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
