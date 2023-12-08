@@ -1,6 +1,6 @@
 {
   "name": "@dedel.alex/adonis5-elasticsearch",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Elasticsearch Provider for AdonisJS 5",
   "main": "build/providers/ElasticsearchProvider.js",
   "author": "dedel.alex",
