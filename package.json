@@ -1,6 +1,6 @@
 {
   "name": "@dedel.alex/adonis5-elasticsearch",
-  "version": "8.13.1",
+  "version": "8.14.0",
   "description": "Elasticsearch Provider for AdonisJS 5",
   "main": "build/providers/ElasticsearchProvider.js",
   "author": "dedel.alex",
@@ -31,7 +31,7 @@
     "elasticsearch"
   ],
   "dependencies": {
-    "@elastic/elasticsearch": "^8.13.1"
+    "@elastic/elasticsearch": "^8.14.0"
   },
   "devDependencies": {
     "@adonisjs/ace": "^11.3.1",
