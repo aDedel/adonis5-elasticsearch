@@ -30,14 +30,12 @@
     "adonisjs 5",
     "elasticsearch"
   ],
-  "dependencies": {
-    "@elastic/elasticsearch": "8.17.1"
-  },
   "devDependencies": {
     "@adonisjs/ace": "^11.3.1",
     "@adonisjs/core": "^5.9.0",
     "@adonisjs/mrm-preset": "^5.0.3",
     "@adonisjs/require-ts": "^2.0.13",
+    "@elastic/elasticsearch": "^8.17.1",
     "@types/node": "^22.14.0",
     "@typescript-eslint/eslint-plugin": "^8.29.0",
     "@typescript-eslint/parser": "^8.29.0",
@@ -53,7 +51,8 @@
   },
   "peerDependencies": {
     "@adonisjs/ace": "^11.3.1",
-    "@adonisjs/core": "^5.9.0"
+    "@adonisjs/core": "^5.9.0",
+    "@elastic/elasticsearch": "^8.0.0"
   },
   "adonisjs": {
     "templates": {

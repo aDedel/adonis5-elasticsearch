@@ -3,7 +3,7 @@
 ## Install dependency
 
 ```bash
-npm i @dedel.alex/adonis5-elasticsearch
+npm i @dedel.alex/adonis5-elasticsearch @elastic/elasticsearch@^8
 ```
 
 ## Run command
